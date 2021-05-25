@@ -4,7 +4,7 @@ let clock = () => {
     let mins = date.getMinutes();
     let secs = date.getSeconds();
     // let time = `${hrs}:${mins}:${secs}`
-    // console.log(time)
+    console.log(date)
     let period = "AM";
 
     // converting 24 hour format to 12 hour format

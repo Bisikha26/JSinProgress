@@ -16,11 +16,20 @@ console.log('*****************String Operations***************')
 console.log(myStr.length);
 console.log(myStr.indexOf('ell'), myStr.indexOf('www'));
 console.log(myStr[0], myStr[myStr.length - 1]);
-console.log(myStr.concat(' yo!'), myStr) // Concat gareko string naya string banne haina, myStr print garda purano nai string print hunchha
+
+// Concat gareko string naya string banne haina, myStr print garda purano nai string print hunchha
+console.log(myStr.concat(' yo!'), myStr) 
+
+// split() is a method of String Object. It splits a string by separator into a new array
+// Split method lay ll substring bata split garera naya array banaudo raichha. type of split gareko function ko result object hunchha just like array ko type is also object
+// String lai futayera array banaune
 console.log(myStr.split('ll'));
-console.log(typeof []); // Split method lay ll substring bata split garera naya array banaudo raichha. type of split gareko function ko result object hunchha just like array ko type is also object
+
+console.log(typeof []); 
 console.log(myStr.toUpperCase())
-console.log(myStr.substr(1, 5), typeof myStr.substr(1, 5), myStr) // substring lay naya string create garne ho but existing string lai change chai gardaina i.e after substr purano string lai print garda purano nai string print hunchha.
+
+// substring lay naya string create garne ho but existing string lai change chai gardaina i.e after substr purano string lai print garda purano nai string print hunchha. substring (1,5) garda 1 position ko string appear hunchha but 5th position ko string is hidden
+console.log(myStr.substr(1, 5), typeof myStr.substr(1, 5), myStr) 
 
 console.log('***************** Null and Undefined ********************')
 
