@@ -1,0 +1,41 @@
+<!-- template tag contains the div which is hidden from the user when the page loads.  -->
+<!-- The content inside the template can be renderd later using JS -->
+
+<!-- The querySelector() method returns the first child element that matches a specified CSS selector(s) of an element. -->
+<!-- The querySelector() method only returns the first element that matches the specified selectors. To return all the matches, use the querySelectorAll() method instead. -->
+
+<!-- The importNode() method imports a node from another document. -->
+<!-- node 	Node object	Required. The node from another document. Can be of any node type
+deep	Boolean	Required. If set to false, only the node itself is imported, if set to true, all child nodes (descendants) are also imported -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showContent()">Show hidden content</button>
+    <template>
+        <div class="template_tag">I like: </div>
+    </template>
+    <script>
+        var myArr = ["Audi", "BMW", "Ford", "Honda", "Jaguar", "Nissan"];
+        const showContent = () => {
+            var temp, item, a, i;
+            temp = document.getElementsByTagName("template")[0];
+            item = temp.content.querySelector("div");
+            console.log(item);
+            for (i = 0; i < myArr.length; i++) {
+                a = document.importNode(item, true);
+                a.textContent += myArr[i];
+                document.body.appendChild(a);
+            }
+        }
+    </script>
+</body>
+
+</html>
+

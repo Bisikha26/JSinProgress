@@ -7,56 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="center-align">
-            My Contacts
-        </h1>
-        <input type="text" id="filterInput" placeholder="search">
-        <ul id="name" class="collection with-header">
-            <li class="collection-header">
-                <li class="collection-header">
-                    <h5>A</h5>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Aba</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Abha</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Ana</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Aca</a>
-                </li>
-                <li class="collection-header">
-                    <h5>B</h5>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Brad</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Badf</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Bisikha</a>
-                </li>
-                <li class="collection-header">
-                    <h5>C</h5>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Cap</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Crow</a>
-                </li>
-                <li class="collection-item">
-                    <a href="#">Cuy</a>
-                </li>
-            </li>
-        </ul>
-    </div>
+   <section id="button-container">
+       <button id="all" class="btnFilter">All</button>
+       <button id="HTML" class="btnFilter">HTML</button>
+       <button id="CSS" class="btnFilter">CSS</button>
+       <button id="JavaScript" class="btnFilter">JavaScript</button>
+   </section>
+   <section id="resources-container">
+        <!-- template for resourse card -->
+        <template>
+            <!-- CARD -->
+            <article id="resource">
+                <div>
+                    <header>
+                        <h2>
+                            <a id="title" href="#" target="_blank">
+                            </a>
+                        </h2>
+                    </header>
+                    <p id="description">
+                    </p>
+                    <div id="tagsContainer">
+                    </div>
+                </div>
+            </article>
+        </template>
+        <!-- template resource card end -->
+   </section>
 </body>
+<script src="dummyData.js"></script>
+<script src="copyTemplate.js"></script>
 <script src="script.js"></script>
-
 </html>
